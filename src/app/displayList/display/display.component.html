@@ -1,0 +1,34 @@
+<!-- <p>display works!</p> -->
+
+<div class="container mt-2">
+    <table class="table table-striped table-bordered">
+        <thead class="text-center">
+            <tr>
+                <th class="col-1">Sr No.</th>
+                <th class="col-2">Title</th>
+                <th class="col-5">Description</th>
+                <th class="col-1">Marked</th>
+                <th class="col-2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of displayList; track $index) {
+                <tr class="m-1" id="data" [ngClass]="item.isMarked == true? 'bg-success' : ''">
+                    <td>{{$index + 1}}</td>
+                    <td>{{item.title}}</td>
+                    <td>{{item.description}}</td>
+                    <td class="text-center">
+                        <input type="checkbox" [checked]="item.isMarked" class="checkbox"
+                            (click)="onCheck(item.id)">
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-danger" (click)="onDelete(item.id)">DELETE</button>
+                        <button class="btn btn-warning ms-2" (click)="navigateEdit(item.id)">EDIT</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<router-outlet></router-outlet>

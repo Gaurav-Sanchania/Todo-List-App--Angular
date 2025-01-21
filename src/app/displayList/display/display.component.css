@@ -1,0 +1,8 @@
+.checkbox {
+    transform: scale(1.5);
+}
+
+/* Not working ?? */
+/* input:nth-child(:checked) {
+    background-color: aqua;
+} */

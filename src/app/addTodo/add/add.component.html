@@ -1,0 +1,34 @@
+<!-- <p>add works!</p> -->
+
+<div class="container mt-2">
+    <h2>Add Task</h2>
+    <form action="" (ngSubmit)="onSubmit()" [formGroup]="form">
+        <div class="col-4 m-2">
+            <label for="title" class="form-label">Title <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="title" formControlName="title" required>
+            @if(form.controls['title'].errors?.['required'] && form.controls['title'].touched) {
+                <div class="text-danger">
+                    This is required.
+                </div>
+            }    
+        </div>
+        <div class="col-6 m-2">
+            <label for="desc" class="form-label">Description <span class="text-danger">*</span></label>
+            <textarea name="desc" id="desc" class="form-control" rows="4" formControlName="description" required>Enter your description.</textarea>
+            @if(form.controls['description'].errors?.['required'] && form.controls['description'].touched) {
+                <div class="text-danger">
+                    This is required.
+                </div>
+            }
+        </div>
+        <div class="col-6 m-2">
+            <label for="check" class="form-label">Mark this 
+                <input type="checkbox" class="ms-2" id="check" formControlName="isMarked">
+                if you are working on it.
+            </label>
+        </div>
+        <div class="col-4 m-2">
+            <input type="submit" id="submit" class="btn btn-primary">
+        </div>
+    </form>
+</div>
