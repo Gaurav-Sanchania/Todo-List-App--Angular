@@ -1,1 +1,16 @@
 # Todo-List-App--Angular
+
+This is an anuglar application which uses local storage for storing and retrieving item. 
+This project uses concepts like:
+  - Routing
+  - Route params
+  - Interpolation
+  - Property binding
+  - Event binding
+  - Two way Data binding
+  - Local storage
+  - Component Life cycle
+  - Structural directives
+  - Reactive Forms Module
+  - Forms Validation.
+
