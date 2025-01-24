@@ -1,5 +1,6 @@
 # Todo-List-App--Angular
 
+This is a very simple project to practice application of basic concepts.
 This is an anuglar application which uses local storage for storing and retrieving item. 
 This project uses concepts like:
   - Routing
